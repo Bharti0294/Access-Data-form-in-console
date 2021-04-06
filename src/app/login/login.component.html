@@ -1,0 +1,111 @@
+
+   <div class="container-fluid bg" style="background-color: antiquewhite;">
+  
+    <form [formGroup]='info' (ngSubmit)="onSubmit(info.value)">
+           <h3 style="text-align:center">
+              Login Form
+          </h3>
+          
+          <div class="col-md-1"></div> 
+
+         <div class="col-md-10 div1" > 
+          <div class="form-group">
+                <!-- Username -->
+                <label for="username"><b>Name:</b> <span class="lblError">*</span></label>
+                <div class="controls">
+                  <input type="text" id="username" placeholder="Name" class="form-control" formControlName="user_name">
+                </div>
+          </div>
+  
+          <div class="form-group">
+            <div class="form-check form-check-inline">
+              <!-- Notification -->
+              <input type="radio" id="emailNotification" class="form-check-input" formControlName="user_notification" value="email">
+              <label class="form-check-label" for="emailNotification">Email</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" id="phoneNotification" class="form-check-input" formControlName="user_notification" value="phone">
+              <label class="form-check-label" for="phoneNotification">Phone</label>
+            </div>
+          </div>
+  
+          <div class="form-row">
+            <div class="col">
+              <div class="form-group">
+                <!-- E-mail -->
+                <label for="email"><b>E-mail:</b> <span class="lblError">*</span></label>
+                <div class="controls">
+                  <input type="text" id="email" placeholder="E-mail" class="form-control" formControlName="user_email">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <!-- Mobile -->
+                <label for="phone"><b>Phone</b> <span class="lblError">*</span></label>
+                <div class="controls">
+                  <input type="number" id="phone" placeholder="Phone" class="form-control" formControlName="user_phone">
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-row" formGroupName="password_group">
+              <div class="col">
+                <div class="form-group">
+                  <div class="control-group">
+                    <!-- Password -->
+                    <label for="password"><b>Password:</b> <span class="lblError">*</span></label>
+                    <div class="controls">
+                    <input type="password" id="password" placeholder="Password" class="form-control" formControlName="user_password">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <div class="control-group">
+                  <!-- Password (Confirm)-->
+                  <label for="password_confirm"><b>Password (Confirm):</b> <span class="lblError">*</span></label>
+                  <div class="controls">
+                    <input type="password" id="password_confirm" placeholder="Password (Confirm)" class="form-control" formControlName="user_confirmPassword">
+                  </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+  
+        <div class="form-group" >
+          <div class="form-check form-check-inline">
+              <!-- Gender -->
+              <input type="radio" id="genderMale" class="form-check-input" formControlName="user_gender" value="Male">
+              <label class="form-check-label" for="genderMale">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input type="radio" id="genderFemale" class="form-check-input" formControlName="user_gender" value="Female">
+              <label class="form-check-label" for="genderFeMale">Female</label>
+          </div>
+        </div>
+  
+          <div class="form-group">
+              <!-- City -->
+              <label for="city"><b>City:</b> <span class="lblError">*</span></label>
+              <div class="controls">
+                  <select id="city" formControlName="user_city" class="form-control">
+                      <option value="Pune">Pune</option>
+                      <option value="Baroda">Baroda</option>
+                      <option value="Surat">Surat</option>
+                  </select>
+              </div>
+          </div>
+  
+          <div class="form-group" style="padding-left: 300px;">
+            <button class="btn btn-primary" type="submit" style="width: 30%;text-align: center;">
+              Submit
+            </button>
+           </div> 
+          <div class="col-md-1"></div> 
+        </div>
+        </form>
+    </div>
+
